@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Telecom Tower Network Infrastructure Overview</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+</head>
+<body>
+  <header>
+    <h1>Telecom Tower Network Infrastructure Overview</h1>
+    <div class="filters">
+      <select id="regionFilter"><option>All Regions</option></select>
+      <select id="towerTypeFilter">
+        <option>All Types</option><option>SST</option><option>Monopole</option><option>TPL</option>
+      </select>
+      <select id="statusFilter">
+        <option>All Status</option><option>Active</option><option>Under Maintenance</option><option>Non-functional</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="metrics">
+    <div class="card"><h3>Total Towers</h3><p id="totalTowers">0</p></div>
+    <div class="card"><h3>Antenna Distribution</h3><canvas id="pieChart"></canvas></div>
+  </section>
+
+  <section class="visuals">
+    <div id="map"></div>
+    <canvas id="barChart"></canvas>
+  </section>
+
+  <section class="table">
+    <h2>Tower & Antenna Information</h2>
+    <table id="towerTable">
+      <thead>
+        <tr>
+          <th>Tower ID</th><th>Location</th><th>Type</th>
+          <th>Antennas</th><th>Status</th><th>Last Maintenance</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <section class="alerts">
+    <h2>Alerts & Notifications</h2>
+    <ul id="alerts"></ul>
+  </section>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
