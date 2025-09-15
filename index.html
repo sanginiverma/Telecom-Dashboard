@@ -6,30 +6,58 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <!-- MarkerCluster CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css" />
+
+<!-- MarkerCluster JS -->
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
 </head>
 <body>
   <header>
-    <h1>Telecom Tower Network Infrastructure Overview</h1>
-    <div class="filters">
-      <select id="regionFilter"><option>All Regions</option></select>
-      <select id="towerTypeFilter">
-        <option>All Types</option><option>SST</option><option>Monopole</option><option>TPL</option>
-      </select>
-      <select id="statusFilter">
-        <option>All Status</option><option>Active</option><option>Under Maintenance</option><option>Non-functional</option>
-      </select>
-    </div>
-  </header>
+  <h1>Telecom Tower Network Infrastructure Overview</h1>
+  <div class="filters">
+    <select id="regionFilter">
+      <option value="All">All Regions</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Bangalore">Bangalore</option>
+      <option value="Chennai">Chennai</option>
+    </select>
 
-  <section class="metrics">
-    <div class="card"><h3>Total Towers</h3><p id="totalTowers">0</p></div>
-    <div class="card"><h3>Antenna Distribution</h3><canvas id="pieChart"></canvas></div>
-  </section>
+    <select id="towerTypeFilter">
+      <option value="All">All Types</option>
+      <option value="SST">SST</option>
+      <option value="Monopole">Monopole</option>
+      <option value="TPL">TPL</option>
+    </select>
 
-  <section class="visuals">
-    <div id="map"></div>
-    <canvas id="barChart"></canvas>
-  </section>
+    <select id="statusFilter">
+      <option value="All">All Status</option>
+      <option value="Active">Active</option>
+      <option value="Under Maintenance">Under Maintenance</option>
+      <option value="Non-functional">Non-functional</option>
+    </select>
+  </div>
+</header>
+
+
+ <section class="metrics">
+  <div class="card">
+    <h3>Total Towers</h3>
+    <p id="totalTowers">0</p>
+  </div>
+  <div class="card">
+    <h3>Antenna Distribution</h3>
+    <canvas id="pieChart"></canvas>
+  </div>
+</section>
+
+<section class="visuals">
+  <div id="map"></div>
+  <canvas id="barChart"></canvas>
+</section>
 
   <section class="table">
     <h2>Tower & Antenna Information</h2>
@@ -49,7 +77,13 @@
     <ul id="alerts"></ul>
   </section>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="script.js"></script>
+ <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
+
