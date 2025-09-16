@@ -8,12 +8,17 @@ const towers = [
 ];
 
 // Map setup
+console.log("✅ script.js loaded");
+
 const map = L.map("map").setView([20.5937, 78.9629], 5);
+
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors"
 }).addTo(map);
-const markers = L.markerClusterGroup();
-map.addLayer(markers);
+
+L.marker([19.0760, 72.8777]).addTo(map)
+  .bindPopup("Mumbai Tower").openPopup();
+
 
 // Chart setup
 let pieChart, barChart;
@@ -121,4 +126,5 @@ document.getElementById("statusFilter").addEventListener("change", applyFilters)
 
 // Initial render
 applyFilters();
+
 
