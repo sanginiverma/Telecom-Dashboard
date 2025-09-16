@@ -4,8 +4,13 @@ header { background: #004080; color: white; padding: 1rem; }
 .metrics { display: flex; gap: 1rem; padding: 1rem; }
 .card { background: #f2f2f2; padding: 1rem; flex: 1; border-radius: 8px; text-align: center; }
 .visuals { display: flex; gap: 1rem; padding: 1rem; }
-#map { height: 400px; flex: 1; }
+#map {
+  height: 400px;   /* REQUIRED */
+  width: 100%;
+  margin: 20px 0;
+}
 #barChart { flex: 1; }
 .table, .alerts { padding: 1rem; }
 table { width: 100%; border-collapse: collapse; }
 th, td { border: 1px solid #ddd; padding: 8px; }
+
