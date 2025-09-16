@@ -1,3 +1,4 @@
+console.log("✅ script.js loaded");
 // Sample tower dataset
 const towers = [
   { id: "TWR-001", city: "Mumbai", type: "SST", antennas: 8, status: "Active", lat: 19.0760, lng: 72.8777, lastMaint: "2025-07-03" },
@@ -120,3 +121,4 @@ document.getElementById("statusFilter").addEventListener("change", applyFilters)
 
 // Initial render
 applyFilters();
+
