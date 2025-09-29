@@ -12,8 +12,21 @@
 
 <!-- MarkerCluster JS -->
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-
 </head>
+  <!-- Modal -->
+<div id="reportModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Tower Health Report</h2>
+    <p><b>Tower ID:</b> <span id="modalTowerId"></span></p>
+    <p><b>City:</b> <span id="modalTowerCity"></span></p>
+    <p><b>Type:</b> <span id="modalTowerType"></span></p>
+    <p><b>Status:</b> <span id="modalTowerStatus"></span></p>
+    <p><b>Antennas:</b> <span id="modalTowerAntennas"></span></p>
+    <p><b>Last Maintenance:</b> <span id="modalTowerLastMaint"></span></p>
+  </div>
+</div>
+
 <body>
   <header>
   <h1>Telecom Tower Network Infrastructure Overview</h1>
@@ -86,4 +99,5 @@
 
 </body>
 </html>
+
 
